@@ -15,6 +15,19 @@ public class Categoria {
 
     private Boolean estado;
 
+    /*
+     * Relacion Categoria con producto
+     * One to Many con mapped by
+     * mapper by mapea por la columna categoria (El nombre del atributo categoria en la clase Producto. )
+     * El atributo se crea del tipo Lista<Producto> productos Lista de tipo Producto El entitique se relaciona
+     * y se nombra en plurar, por ser lista de productos
+     *
+     *
+     * */
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
+
     public Integer getIdCategoria() {
         return idCategoria;
     }

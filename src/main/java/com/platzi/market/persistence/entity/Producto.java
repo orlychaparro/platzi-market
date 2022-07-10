@@ -26,6 +26,20 @@ public class Producto {
 
     private Boolean estado;
 
+    /*
+    * Relacion Producto con Categoria
+    * Mucho a uno many to one
+    * join column relaciona con la columna id_categoria de Categoria (nombre como el campo en la base
+    * private Categoria categoria  crea el atributo categoria del tipo Clase Categoria de la entidad que queremos relacionar.
+    *
+    * En la clase o entity Categoria se mapea una lista a Producto... ver en clase Categoria
+    * */
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
+
+
+
     public Integer getIdProducto() {
         return IdProducto;
     }
