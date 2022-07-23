@@ -8,7 +8,15 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_producto")
-    private Integer IdProducto ;
+    private Integer idProducto;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     private String nombre;
 
@@ -41,11 +49,11 @@ public class Producto {
 
 
     public Integer getIdProducto() {
-        return IdProducto;
+        return idProducto;
     }
 
     public void setIdProducto(Integer idProducto) {
-        IdProducto = idProducto;
+        this.idProducto = idProducto;
     }
 
     public String getNombre() {
