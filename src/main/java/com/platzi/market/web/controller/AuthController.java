@@ -25,10 +25,10 @@ public class AuthController {
 
     @Autowired
     private PlatziUserDetailsService platziUserDetailsService;
-
+    @Autowired
     private JWTUtil jwtUtil;
 
-    @PostMapping("authenticate")
+    @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> createToken(@RequestBody AuthenticationRequest request) {
 
         try{
